@@ -4,7 +4,7 @@ function fetchQuote() {
         .then(data => {
             const quote = data.content;
             const author = data.author;
-            const imageUrl = data.authorSlug ? `https://quotes.rest/quote/image?author=${data.authorSlug}` : '';
+            const imageUrl = `https://www.google.com/search?q=${encodeURIComponent(author)}&tbm=isch&tbs=isz:l`;
 
             document.getElementById("quote").innerText = `"${quote}"`;
             document.getElementById("author").innerText = `- ${author}`;
